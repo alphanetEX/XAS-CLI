@@ -73,11 +73,5 @@ nvm install v10.15.3
 npm -v && node -v 
 
 echo "script terminado!"
-
-
-
-
-
-
 echo "passwd user :$repeatwd  passwd_sshkey: $passparse wlanpasswd:$wlanpasswd"  
 echo "timezone: $timezone email: $email routerssid: $ssid" 

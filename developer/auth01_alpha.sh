@@ -1,7 +1,6 @@
 #!/bin/bash
 #Developer:alphanetEX 
-#Basic Configuration Eviroment of Ubunutu for SBC XU4 armhf
-
+#Basic Configuration Eviroment of Ubunutu for AWSEC2 
 passw= echo -e "odroid\n" 
 $passw | sudo -S apt-get update
 $passw | sudo -S apt-get upgrade -y -f
@@ -50,6 +49,17 @@ echo "\n" | sh-keygen -t rsa -b 4096 -C "email" -P "passparse"
 #-P password asignation   
 
 $passw | sudo -S etckeeper commit "Git Github/Gitlab basic enviroment completed"
+
+#configuracion de nvm y npm final de comanderia 
+$passw | sudo -S apt-get install -y curl build-essential libssl-dev git
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+$passw | su - odroid #check and comprobate this section 
+nvm ls-remote  
+nvm install v10.15.3
+npm -v && node -v 
+
+$passw | sudo -S etckeeper commit "nvm with node and npm dependencias installed"
+
 #configurating docker instalation 
 $passw | sudo -S apt-get install \
     apt-transport-https \
@@ -70,11 +80,9 @@ $passw | sudo -S apt-get install docker-ce docker-ce-cli containerd.io
 $passw | sudo -S groupadd docker
 $passw | usermod -aG docker $USER
 $passw | sudo -S etckeeper commit "Docker installation was succesfull"
-echo "script was ended!"
-
 
 #odroid shifter shell instalation 
-echo -e "kakaroto\n" | sudo -S apt-get -y install \
+$passw | sudo -S apt-get -y install \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -83,6 +91,11 @@ git clone https://github.com/hardkernel/wiringPi
 cd wiringPi/
 ./build 
 
-$passw | sudo -S etckeeper commit "WiringPI and Shifter Shield configuration was succesfull"
+$passw | sudo -S etckeeper commit "WiringPI and Shifter Shield configuration was success"
+#modificacion de ohmyzsh 
+$passw | sudo -S apt-get install ccze -y 
+#dmesg | ccze -A 
 
+
+echo "script was ended!"
 
