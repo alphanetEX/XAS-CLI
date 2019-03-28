@@ -69,7 +69,20 @@ sudo add-apt-repository \
 $passw | sudo -S apt-get install docker-ce docker-ce-cli containerd.io
 $passw | sudo -S groupadd docker
 $passw | usermod -aG docker $USER
-$pass | sudo -S etckeeper commit "Docker installation was succesfull"
+$passw | sudo -S etckeeper commit "Docker installation was succesfull"
 echo "script was ended!"
+
+
+#odroid shifter shell instalation 
+echo -e "kakaroto\n" | sudo -S apt-get -y install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+git clone https://github.com/hardkernel/wiringPi
+cd wiringPi/
+./build 
+
+$passw | sudo -S etckeeper commit "WiringPI and Shifter Shield configuration was succesfull"
 
 
