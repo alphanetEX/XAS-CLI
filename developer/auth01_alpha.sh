@@ -48,6 +48,28 @@ git config --global user.name "USER"
 echo "\n" | sh-keygen -t rsa -b 4096 -C "email" -P "passparse"
 #-C email asignation
 #-P password asignation   
+
+$passw | sudo -S etckeeper commit "Git Github/Gitlab basic enviroment completed"
+#configurating docker instalation 
+$passw | sudo -S apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+
+sudo add-apt-repository \
+   "deb [arch=armhf] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+$passw | sudo -S apt-get install docker-ce docker-ce-cli containerd.io
+$passw | sudo -S groupadd docker
+$passw | usermod -aG docker $USER
+$pass | sudo -S etckeeper commit "Docker installation was succesfull"
 echo "script was ended!"
 
 
