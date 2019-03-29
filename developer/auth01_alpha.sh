@@ -93,7 +93,7 @@ cd wiringPi/
 
 $passw | sudo -S etckeeper commit "WiringPI and Shifter Shield configuration was success"
 #modificacion de ohmyzsh 
-$passw | sudo -S apt-get install ccze -y 
+$passw | sudo -S apt-get install ccze -A
 #dmesg | ccze -A 
 
 
