@@ -99,3 +99,4 @@ $passw | sudo -S apt-get install ccze -A
 
 echo "script was ended!"
 
+WORKING STAGE
