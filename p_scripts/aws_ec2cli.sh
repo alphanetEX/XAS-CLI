@@ -1,6 +1,8 @@
 #!/bin/bash 
 #-------------aws ec2 installation------------------------
-passw= echo -e "yourpassword\n" 
+passwd=""
+read -p "Escriba su contrasenia: " passwd
+passw= echo -e "$passwd\n" 
 $passw | sudo -S apt-get install vim-nox git python-pip -y
 $passw | sudo -S pip install powerline-status
 $passw | sudo -S apt-get install powerline -y
