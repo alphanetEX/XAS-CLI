@@ -75,11 +75,12 @@ cd
 
 
 #newline='ZSH_THEME="powerlevel9k/powerlevel9k"'  
-powerlevel9k='POWERLEVEL9K_MODE="awesome-fontconfig"' 
+powerlevel9k='POWERLEVEL9K_MODE="nerdfont-complete"' 
 sed -i '11c\ZSH_THEME="powerlevel9k/powerlevel9k"' ~/.zshrc
 sed -i -e "12s/.*/$powerlevel9k/" ~/.zshrc
 
-sed -i '/User configuration/ i POWERLEVEL9K_SHORTEN_DIR_LENGTH=1 \
+sed -i '/User configuration/ i source ~/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme \
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1 \
 POWERLEVEL9K_SHORTEN_DELIMITER="" \
 #POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right" \
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true \
@@ -163,5 +164,7 @@ EOF
 #.local/lib/python2.7/site-packages/powerline/
 
 
-#verificacion de espacios 
+#verificacion de espacios/ pasar el codigo de sed al repo de auth01_alpha.sh
+
+§
 

@@ -34,8 +34,8 @@ if [ -f .local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh 
 then source .local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 fi
 
--------------aws ec2 installation------------------------
-passw= echo -e "kakaroto\n" 
+#-------------aws ec2 installation------------------------
+passw= echo -e "yourpassword\n" 
 $passw | sudo -S apt-get install vim-nox git python-pip -y
 $passw | sudo -S pip install powerline-status
 $passw | sudo -S apt-get install powerline -y
@@ -194,6 +194,6 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%F{white}"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%F{white} " 
 EOF 
 
---------rutas-------
+#--------rutas-------
 #/usr/lib/python2.7/dist-packages/powerline
 #.local/lib/python2.7/site-packages/powerline/
