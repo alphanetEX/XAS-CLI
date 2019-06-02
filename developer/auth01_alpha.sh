@@ -123,7 +123,7 @@ cd wiringPi/
 
 $passw | sudo -S etckeeper commit "WiringPI and Shifter Shield configuration was success"
 
-$passw | sudo -S apt-get install ccze -A
+$passw | sudo -S apt-get install ccze -y
 #dmesg | ccze -A 
 
 #-------------aws ec2 terminal customization installation------------------------
@@ -253,6 +253,8 @@ POWERLEVEL9K_DIR_DEFAULT_BACKGROUND="clear" \
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white" \
 POWERLEVEL9K_ROOT_INDICATOR_BACKGROUND="red" \
 POWERLEVEL9K_ROOT_INDICATOR_FOREGROUND="white"\
+POWERLEVEL9K_DIR_ETC_BACKGROUND="clear"
+POWERLEVEL9K_DIR_ETC_FOREGROUND="red"
 #status color \
 POWERLEVEL9K_STATUS_OK_BACKGROUND="clear" \
 POWERLEVEL9K_STATUS_OK_FOREGROUND="blue" \
