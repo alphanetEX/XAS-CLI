@@ -41,7 +41,7 @@ PasswordAuthentication no \
 PubkeyAuthentication yes' /etc/ssh/sshd_config
 $passw | sudo -S /etc/init.d/ssh restart
 
-#fail2ban configuration
+#fail2ban configuration problem with this part 
 $passw | sudo -S apt-get install fail2ban -y
 $passw | sudo -S cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 $passw | sudo -S sed -i '63c\bantime  = 5m' /etc/fail2ban/jail.local
@@ -59,7 +59,7 @@ $pass | sudo -S etckeeper commit "Basic Security Completed"
 git config --global user.mail "fixtexhax@gmail.com"
 git config --global user.name "AlphanetEX"
 #generating ssh keys
-echo "\n" | ssh-keygen -t rsa -b 4096 -C "fixtexhax@gmail.com" -P "vkpetkqnc"
+echo -e "\n" | ssh-keygen -t rsa -b 4096 -C "fixtexhax@gmail.com" -P "vkpetkqnc"
 #-C email asignation
 #-P password asignation
 $passw | sudo -S etckeeper commit "Git Github/Gitlab basic enviroment completed"
@@ -253,8 +253,8 @@ POWERLEVEL9K_DIR_DEFAULT_BACKGROUND="clear" \
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white" \
 POWERLEVEL9K_ROOT_INDICATOR_BACKGROUND="red" \
 POWERLEVEL9K_ROOT_INDICATOR_FOREGROUND="white"\
-POWERLEVEL9K_DIR_ETC_BACKGROUND="clear"
-POWERLEVEL9K_DIR_ETC_FOREGROUND="red"
+POWERLEVEL9K_DIR_ETC_BACKGROUND="clear"\
+POWERLEVEL9K_DIR_ETC_FOREGROUND="red"\
 #status color \
 POWERLEVEL9K_STATUS_OK_BACKGROUND="clear" \
 POWERLEVEL9K_STATUS_OK_FOREGROUND="blue" \
