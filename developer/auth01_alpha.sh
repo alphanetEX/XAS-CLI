@@ -59,7 +59,7 @@ $pass | sudo -S etckeeper commit "Basic Security Completed"
 git config --global user.mail "fixtexhax@gmail.com"
 git config --global user.name "AlphanetEX"
 #generating ssh keys
-echo -e "\n" | ssh-keygen -t rsa -b 4096 -C "fixtexhax@gmail.com" -P "vkpetkqnc"
+echo -e "\n" | ssh-keygen -t rsa -b 4096 -C "email" -P "password"
 #-C email asignation
 #-P password asignation
 $passw | sudo -S etckeeper commit "Git Github/Gitlab basic enviroment completed"
@@ -148,6 +148,8 @@ set laststatus=2
 " Use 256 colours (Use this setting only if your terminal supports 256 colours) 
 set t_Co=256
 EOF
+
+
 
 
 cat <<EOF >> ~/.bashrc
